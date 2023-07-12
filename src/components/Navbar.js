@@ -25,13 +25,15 @@ function Navbar() {
   window.addEventListener('resize', showButton);
 
   return (
-    <>
       <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            TRVL
-            <i class='fab fa-typo3' />
-          </Link>
+        <div className='navbar-container' >
+          <a href="/src/clean house logo (2).jpg" className='navbar-logo' onClick={closeMobileMenu}>
+            <img src="/sgs black logo only.png" alt="Logo" width="160" height ="80" ></img>
+            <p style={{ marginRight: '20px' }}>
+            Spotless Gutter Services
+            </p>
+            
+          </a>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
@@ -50,30 +52,19 @@ function Navbar() {
                 Services
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Products
-              </Link>
-            </li>
 
             <li>
               <Link
                 to='/sign-up'
-                className='nav-links-mobile'
+                className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Sign Up
+                Contact Us
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
         </div>
       </nav>
-    </>
   );
 }
 
